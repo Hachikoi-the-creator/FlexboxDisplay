@@ -12,6 +12,20 @@
   <title>A</title>
   
   <style>
+    /* 1 section Flexbox */
+    /* responsivenes */
+    .small-example {
+      display: flex;
+    }
+    @media only screen and (max-width: 1100px) {
+      .small-example {
+      /* display: flex; */
+      flex-direction: column;
+      }
+    }
+    
+    
+
     /* Flexbox stuff */
 
     .container{
@@ -20,8 +34,11 @@
       /* change the direction from x -> y */
       /* flex-direction: column; */
 
-      /*Pssible values: flex-start(default), flex-end, space-around, space-between, space evenly  */
-      justify-content: space-evenly;
+      /*Pssible values: flex-start(default), flex-end, space-around, space-between, space evenly  
+      -flex-start
+      -flex-start
+      -*/
+      justify-content:space-around;
     }
 
     /* extra stuff */
@@ -29,44 +46,146 @@
       font-size: 20px;
       text-align: center;
     }
+    .sub-index {
+      display: flex;
+      font-size: 1.5rem;
+    }
+    .sub-index > .second {
+      margin-left: auto;
+      margin-right: 2ch;
+    }
+    .sub-index > .sub-title {
+      font-size: 2rem;
+      font-style: italic;
+      font-weight: 400;
+      text-decoration: underline;
+    }
   </style>
-
 </head>
 
 <body>
   
-  
-  <h1>justify content & flex direction</h1>
-  <!-- my explanation of what is happening -->
+  <h1 id="top">
+    <a href="#direction">flex direction</a>
+    <a href="#justify">justify</a> &
+    <a href="#">align content</a>
+  </h1>
+
+  <!-------
+  First section - 1/2 - Flex direction
+  ------->
+  <h2 id="direction">Flex Direction</h2>
   <div class="resume">
-    <div class="style-explan">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores distinctio voluptas ut modi provident maxime sequi eaque error voluptate pariatur.
-    </div>
-    
-    <div class="math-rep">
-      Mathematical Representation
-      <p>Lorem, ipsum dolor.</p>
+    <!-- <div class="style-explan"> -->
       <ul>
-        <li>N: number of items</li>
-        <li>1fr: 1 fraction of empty space out of all the available</li>
+        <li>column:</li>
+        <ul>
+          <li>Arranges childs in a column</li>
+        </ul>
+        
+        <li>rows:</li>
+        <ul>
+          <li>Defaut value, fits everything in rows</li>
+        </ul>
       </ul>
-    </div>
-  </div>
+    <!-- </div> -->
+  </div>  <!-- end of resume -->
 
-  <div class="code-snip html-code">
+  <!-- this div is to make responsiveness here -->
+  <div class="small-example">
+  <!-- html code -->
+  <div class="code-snip html-code" id="html-code-a">
     <pre>
-      <code class="lang-html">
-        &lt;<span class="hljs-keyword">div</span> class=<span class="hljs-string">"math-rep"</span>&gt;
-        Mathematical Representation
-        &lt;ul&gt;
-        &lt;li&gt;N: <span class="hljs-built_in">number</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">items</span>&lt;/li&gt;
-        &lt;li&gt;<span class="hljs-number">1</span>fr: <span class="hljs-number">1</span> fraction <span class="hljs-keyword">of</span> <span class="hljs-literal">empty</span> <span class="hljs-literal">space</span> out <span class="hljs-keyword">of</span> all <span class="hljs-keyword">the</span> available&lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;/<span class="hljs-keyword">div</span>&gt;
-      </code>
-    </pre>
-  </div>
+  <code class="lang-html">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"resize-it"</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></span>
+  &lt;<span class="hljs-regexp">/div&gt;</span></code></pre>
+  </div>  <!-- end html code -->
 
+  <!-- live example 1 -->
+  <div class="resize-it" style="width: fit-content; margin: 0 auto; resize: both;">
+    <nav class="container" style="flex-direction: column;">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </nav>
+  </div>  <!-- end live example -->
+
+  <!-- css code -->
+  <div class="code-snip css-code">
+    <pre class="line-numbers">
+  <code class="language-css">
+    .container{
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    .resize-it {
+      width: fit-content;
+      margin: 0 auto;
+      resize: both;
+    }
+  </code>
+    </pre>
+  </div>  <!-- end fo div for css code -->
+  </div>  <!-- end of div to responsiveness -->
+  
+
+  <!-------
+  Second thingy 
+  ------->
+  <h2 id="justify">Justify - Moves items tru the X axis (column)</h2>
+  
+  <ul>
+    <li><a href="#space-evenly">space-evenly:</a>
+          <ul>
+            <li>Divides the empty space in fractions</li>
+            <li>N° fr = Nitems + 1 </li>
+            <li>Distributes those fr evenly between & around the items</li>
+          </ul>
+        </li>
+        
+        <li><a href="#space-between">space between:</a>
+          <ul>
+            <li>-</li>
+          </ul>
+        </li>
+
+        <li><a href="#space-around">space around:</a>
+          <ul>
+            <li>-</li>
+          </ul>
+        </li>
+
+        <li><a href="#space-evenly">space evenly:</a>
+          <ul>
+            <li>-</li>
+          </ul>
+        </li>
+
+        <li><a href="#">flex end:</a>
+          <ul>
+            <li>Pushes all childs to the right</li>
+          </ul>
+        </li>
+
+        <li><a href="#">flex start:</a>
+          <ul>
+            <li>Default: Pushes all childs to the left</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <div class="sub-index">
+        <p class="sub-title">space-between</p>
+        <p class="second">GOTO sub-index</p>
+        <p>GOTO top</p>
+      </div><!-- end of resume -->
+  <!-- live example 2 -->
   <div class="resize-it">
     <nav class="container">
       <div>1</div>
@@ -74,22 +193,61 @@
       <div>3</div>
       <div>4</div>
     </nav>
-  </div>
+  </div>  <!-- end live example -->
 
-  <!-- code snippets -->
+  <!-- css code -->
   <div class="code-snip css-code">
     <pre class="line-numbers">
-      <code class="language-css">
-        .container{
-          display: flex;
-          justify-content: space-evenly;
-        }
-      </code>
+  <code class="language-css">
+    .container{
+      display: flex;
+      justify-content: space-evenly;
+    }
+  </code>
     </pre>
-    
-    
+  </div>  <!-- end css code -->
+  
+  <!-------
+  Third thingy
+  ------->
+  <h2 id="justify">AAA</h2>
+  <h3>Moves items tru the X axis (column)</h3>
+  <div class="resume">
+      <ul>
+        <li>space-evenly:</li>
+        <ul>
+          <li>Divides the empty space in fractions</li>
+          <li>N° fr = Nitems + 1 </li>
+          <li>Distributes those fr evenly between & around the items</li>
+        </ul>
+      </ul>
   </div>
-  <!-- code highlighting -->
+
+  <!-- live example 2 -->
+  <div class="resize-it">
+    <nav class="container" style="justify-content: space-around;">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </nav>
+  </div>  <!-- end live example -->
+
+  <!-- css code -->
+  <div class="code-snip css-code">
+    <pre class="line-numbers">
+  <code class="language-css">
+    .container{
+      display: flex;
+      justify-content: space-evenly;
+    }
+  </code>
+    </pre>
+  </div>  <!-- end css code -->
+
+
+
+  <!-- code highlighting script-->
   <script src="../prism-highlight/prism.js"></script>
 </body>
 </html>
