@@ -1,0 +1,51 @@
+/* TODO
+-write the styles that are a constant tru all the files */
+/* FIN */
+html { margin: 0; }
+body {
+  background-color: #ffeead;
+  margin: 30px;
+}
+.container > div {
+  padding: 10px 50px;
+  text-align: center;
+  font-size: 2em;
+  color: #ffeead;
+}
+.container > div:nth-child(1) {
+  background-color: rgb(187, 59, 59);
+}
+.container > div:nth-child(2) {
+  background-color: rgb(184, 177, 78);
+}
+.container > div:nth-child(3) {
+  background-color: rgb(245, 155, 71);
+}
+.container > div:nth-child(4) {
+  background-color: rgb(184, 177, 78);
+}
+
+/* code blocks styling */
+pre.line-numbers {
+  padding: 0;
+  margin: 0; 
+  display: flex;
+}
+
+/* TODO add inner shadow here */
+.code-snip > pre { border: 1px solid #000; }
+.code-snip {
+  display: flex;
+  flex: 1 1 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.language-css {
+  width: 35%;
+  height: fit-content;
+}
+.language-html {
+  width: 60%;
+  height: fit-content;
+}

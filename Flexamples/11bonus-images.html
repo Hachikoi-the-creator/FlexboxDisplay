@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../prism-highlight/prism.css">
+  <title>11th</title>
+
+  <style>
+    /* basic styling */
+    html, body {
+      background-color: #ffeead;
+      margin: 20px;
+    }
+    /* flex stuff */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    /* Makes the images fit all the space available, avoids ugly blank spaces */
+    .container > div > img {
+      width: 100%;
+      height: 100%;
+      /* object-fit:
+      -contain: kinda center the elements
+      -scale-down: same as contain, but leans more on flex shrink & grow propieties
+      -unset: smooth fill, whole pic, no blank spaces
+      -fill: shrinks down the whole image, no blank spaces
+      -cover: instead of shrink, cuts the image to make it fit, no blank spaces
+      -*/
+      object-fit: cover;
+    }
+    /* .container > div {
+      flex: 1 1 133px;
+    } */
+
+    /* difference between big & normal */
+    .container > .big {
+      flex: 1 1 233px;
+    }
+    .container > .normal {
+      flex: 1 1 133px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="big"><img src="./fill-img/big.png" alt=""></div>
+    <div class="normal"><img src="./fill-img/not-big.jpg" alt=""></div>
+    <div class="normal"><img src="./fill-img/not-big.jpg" alt=""></div>
+    <div class="big"><img src="./fill-img/big.png" alt=""></div>
+    <div class="normal"><img src="./fill-img/not-big.jpg" alt=""></div>
+    <div class="normal"><img src="./fill-img/not-big.jpg" alt=""></div>
+    <div class="big"><img src="./fill-img/big.png" alt=""></div>
+    <div class="normal"><img src="./fill-img/not-big.jpg" alt=""></div>
+    <div class="normal"><img src="./fill-img/not-big.jpg" alt=""></div>
+    <div class="big"><img src="./fill-img/big.png" alt=""></div>
+    
+  </div>
+
+  <script src="../prism-highlight/prism.js"></script>
+</body>
+</html>

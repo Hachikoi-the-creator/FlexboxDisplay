@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../prism-highlight/prism.css">
+  <link rel="stylesheet" href="./generic-styles.css">
+  <title>A</title>
+  
+  <style>
+    
+    /* Flexbox stuff */
+    .resize-it {
+    border: 2px solid;
+    padding: 20px; 
+    width: 90%;
+    resize: horizontal;
+    overflow: auto;
+    }
+    .container{
+      display: flex;
+
+      /* change the direction from x -> y */
+      /* flex-direction: column; */
+
+      /*Pssible values: flex-start(default), flex-end, space-around, space-between, space evenly  */
+      justify-content: space-evenly;
+    }
+
+    /* extra stuff */
+    .desc {
+      font-size: 20px;
+    }
+
+
+  </style>
+
+</head>
+
+<body>
+  
+  <div class="desc"></div>
+  
+
+  <div class="code-snip">
+
+    <pre class="line-numbers">
+      <code class="language-css">
+        p { color: red }
+      </code>
+    </pre>
+
+    <pre>
+      <code class="language-html">
+        <pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> class=<span class="hljs-string">"math-rep"</span>&gt;
+          Mathematical Representation
+          &lt;ul&gt;
+            &lt;li&gt;N: <span class="hljs-built_in">number</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">items</span>&lt;/li&gt;
+            &lt;li&gt;<span class="hljs-number">1</span>fr: <span class="hljs-number">1</span> fraction <span class="hljs-keyword">of</span> <span class="hljs-literal">empty</span> <span class="hljs-literal">space</span> out <span class="hljs-keyword">of</span> all <span class="hljs-keyword">the</span> available&lt;/li&gt;
+          &lt;/ul&gt;
+      &lt;/<span class="hljs-keyword">div</span>&gt;
+      </code></pre>
+      
+      </code>
+    </pre>
+  </div>
+
+  <div class="math-rep">
+    Mathematical Representation
+    <ul>
+      <li>N: number of items</li>
+      <li>1fr: 1 fraction of empty space out of all the available</li>
+    </ul>
+
+  </div>
+
+  <div class="flex-style"></div>
+
+  <div class="resize-it">
+    <nav class="container">
+      <div>AAA</div>
+      <div>BBB</div>
+      <div>WWW</div>
+      <div>OOO</div>
+    </nav>
+    
+  </div>
+  <!-- code highlighting -->
+  <script src="../prism-highlight/prism.js"></script>
+</body>
+</html>

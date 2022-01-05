@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../prism-highlight/prism.css">
+  <link rel="stylesheet" href="./generic-styles.css">
+
+  <title>C</title>
+  
+  <style>
+    /* Flexbox stuff */
+    .container{
+      display: flex;
+    }
+    /* making the children strech tru the father */
+    /*flex is a shorthand for: flex-grow, flex-shrink, flex-basis (more advanced stuff) */
+    /* .container > div {
+      flex: 1;
+    } */
+    
+    /* making 1 item twice as big as the others */
+    /* .container > div:nth-child(2) {
+      flex: 2;
+    } */
+
+    /* real case scenario: one shrinks/grows others stay the same */
+    .container > div:nth-child(2) {
+      flex: 2;
+    }
+
+    /* notes: It doesnt matter the flex: n, if only one item is changin, takes importance when  n items changin > 1 */
+
+
+
+  </style>
+
+</head>
+
+<body>
+  <!-- TODO take some ss whit every option, and code below -->
+  <!-- HTML markup -->
+  <nav class="container">
+    <div>AAA</div>
+    <div>BBB</div>
+    <div>WWW</div>
+    <div>OOO</div>
+  </nav>
+  <script src="../prism-highlight/prism.js"></script>
+</body>
+</html>
