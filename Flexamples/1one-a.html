@@ -4,20 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="../prism-highlight/prism.css">
   <link rel="stylesheet" href="./generic-styles.css">
   <title>A</title>
   
   <style>
-    
     /* Flexbox stuff */
-    .resize-it {
-    border: 2px solid;
-    padding: 20px; 
-    width: 90%;
-    resize: horizontal;
-    overflow: auto;
-    }
+
     .container{
       display: flex;
 
@@ -33,8 +29,6 @@
       font-size: 20px;
       text-align: center;
     }
-
-
   </style>
 
 </head>
@@ -59,19 +53,31 @@
     </div>
   </div>
 
+  <div class="code-snip html-code">
+    <pre>
+      <code class="lang-html">
+        &lt;<span class="hljs-keyword">div</span> class=<span class="hljs-string">"math-rep"</span>&gt;
+        Mathematical Representation
+        &lt;ul&gt;
+        &lt;li&gt;N: <span class="hljs-built_in">number</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">items</span>&lt;/li&gt;
+        &lt;li&gt;<span class="hljs-number">1</span>fr: <span class="hljs-number">1</span> fraction <span class="hljs-keyword">of</span> <span class="hljs-literal">empty</span> <span class="hljs-literal">space</span> out <span class="hljs-keyword">of</span> all <span class="hljs-keyword">the</span> available&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;/<span class="hljs-keyword">div</span>&gt;
+      </code>
+    </pre>
+  </div>
 
   <div class="resize-it">
     <nav class="container">
-      <div>AAA</div>
-      <div>BBB</div>
-      <div>WWW</div>
-      <div>OOO</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
     </nav>
-    
   </div>
 
   <!-- code snippets -->
-  <div class="code-snip">
+  <div class="code-snip css-code">
     <pre class="line-numbers">
       <code class="language-css">
         .container{
@@ -81,19 +87,7 @@
       </code>
     </pre>
     
-    <pre>
-      <code class="language-html">
-        <pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> class=<span class="hljs-string">"math-rep"</span>&gt;
-          Mathematical Representation
-          &lt;ul&gt;
-            &lt;li&gt;N: <span class="hljs-built_in">number</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">items</span>&lt;/li&gt;
-            &lt;li&gt;<span class="hljs-number">1</span>fr: <span class="hljs-number">1</span> fraction <span class="hljs-keyword">of</span> <span class="hljs-literal">empty</span> <span class="hljs-literal">space</span> out <span class="hljs-keyword">of</span> all <span class="hljs-keyword">the</span> available&lt;/li&gt;
-          &lt;/ul&gt;
-      &lt;/<span class="hljs-keyword">div</span>&gt;
-      </code></pre>
-      
-      </code>
-    </pre>
+    
   </div>
   <!-- code highlighting -->
   <script src="../prism-highlight/prism.js"></script>
