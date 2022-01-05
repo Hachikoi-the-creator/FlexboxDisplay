@@ -24,6 +24,17 @@ body {
 .container > div:nth-child(4) {
   background-color: rgb(184, 177, 78);
 }
+h1 {
+  text-transform: capitalize;
+  text-align: center;
+}
+/* the stuff below the title */
+.resume {
+  display: flex;
+  flex: 1 1 47%;
+  justify-content: space-between;
+  word-wrap:normal;
+}
 
 /* code blocks styling */
 pre.line-numbers {

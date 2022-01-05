@@ -31,6 +31,7 @@
     /* extra stuff */
     .desc {
       font-size: 20px;
+      text-align: center;
     }
 
 
@@ -40,17 +41,46 @@
 
 <body>
   
-  <div class="desc"></div>
   
+  <h1>justify content & flex direction</h1>
+  <!-- my explanation of what is happening -->
+  <div class="resume">
+    <div class="style-explan">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores distinctio voluptas ut modi provident maxime sequi eaque error voluptate pariatur.
+    </div>
+    
+    <div class="math-rep">
+      Mathematical Representation
+      <p>Lorem, ipsum dolor.</p>
+      <ul>
+        <li>N: number of items</li>
+        <li>1fr: 1 fraction of empty space out of all the available</li>
+      </ul>
+    </div>
+  </div>
 
+
+  <div class="resize-it">
+    <nav class="container">
+      <div>AAA</div>
+      <div>BBB</div>
+      <div>WWW</div>
+      <div>OOO</div>
+    </nav>
+    
+  </div>
+
+  <!-- code snippets -->
   <div class="code-snip">
-
     <pre class="line-numbers">
       <code class="language-css">
-        p { color: red }
+        .container{
+          display: flex;
+          justify-content: space-evenly;
+        }
       </code>
     </pre>
-
+    
     <pre>
       <code class="language-html">
         <pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> class=<span class="hljs-string">"math-rep"</span>&gt;
@@ -64,27 +94,6 @@
       
       </code>
     </pre>
-  </div>
-
-  <div class="math-rep">
-    Mathematical Representation
-    <ul>
-      <li>N: number of items</li>
-      <li>1fr: 1 fraction of empty space out of all the available</li>
-    </ul>
-
-  </div>
-
-  <div class="flex-style"></div>
-
-  <div class="resize-it">
-    <nav class="container">
-      <div>AAA</div>
-      <div>BBB</div>
-      <div>WWW</div>
-      <div>OOO</div>
-    </nav>
-    
   </div>
   <!-- code highlighting -->
   <script src="../prism-highlight/prism.js"></script>
