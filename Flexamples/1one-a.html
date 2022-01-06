@@ -12,20 +12,6 @@
   <title>A</title>
   
   <style>
-    /* 1 section Flexbox */
-    /* responsivenes */
-    .small-example {
-      display: flex;
-    }
-    @media only screen and (max-width: 1100px) {
-      .small-example {
-      /* display: flex; */
-      flex-direction: column;
-      }
-    }
-    
-    
-
     /* Flexbox stuff */
 
     .container{
@@ -33,12 +19,6 @@
 
       /* change the direction from x -> y */
       /* flex-direction: column; */
-
-      /*Pssible values: flex-start(default), flex-end, space-around, space-between, space evenly  
-      -flex-start
-      -flex-start
-      -*/
-      justify-content:space-around;
     }
 
     /* extra stuff */
@@ -92,22 +72,22 @@
   </div>  <!-- end of resume -->
 
   <!-- this div is to make responsiveness here -->
-  <div class="small-example">
-  <!-- html code -->
-  <div class="code-snip html-code" id="html-code-a">
-    <pre>
-  <code class="lang-html">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"resize-it"</span>&gt;
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></span>
-  &lt;<span class="hljs-regexp">/div&gt;</span></code></pre>
-  </div>  <!-- end html code -->
+  <div class="resp-code">
+  
+ 
+<!-- html code -->
+<div class="code-snip html-code" id="html-code-a">
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+    </code></pre>
+    HTML</div>  <!-- end html code -->
 
   <!-- live example 1 -->
-  <div class="resize-it" style="width: fit-content; margin: 0 auto; resize: both;">
+  <div class="resize-it" style="width: fit-content; margin: 0 auto; resize: horizontal;">
     <nav class="container" style="flex-direction: column;">
       <div>1</div>
       <div>2</div>
@@ -121,26 +101,20 @@
     <pre class="line-numbers">
   <code class="language-css">
     .container{
+      display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
     }
-    .resize-it {
-      width: fit-content;
-      margin: 0 auto;
-      resize: both;
-    }
-  </code>
-    </pre>
-  </div>  <!-- end fo div for css code -->
+  </code></pre>
+  CSS</div>  <!-- end css code -->
   </div>  <!-- end of div to responsiveness -->
   
 
   <!-------
-  Second thingy 
+  JUSTIFY CONTENT
   ------->
   <h2 id="justify">Justify - Moves items tru the X axis (column)</h2>
   
-  <ul>
+  <ul id="sub-index">
     <li><a href="#space-evenly">space-evenly:</a>
           <ul>
             <li>Divides the empty space in fractions</li>
@@ -161,33 +135,32 @@
           </ul>
         </li>
 
-        <li><a href="#space-evenly">space evenly:</a>
-          <ul>
-            <li>-</li>
-          </ul>
-        </li>
-
-        <li><a href="#">flex end:</a>
+        <li><a href="#flex-end">flex end:</a>
           <ul>
             <li>Pushes all childs to the right</li>
           </ul>
         </li>
 
-        <li><a href="#">flex start:</a>
+        <li><a href="#flex-start">flex start:</a>
           <ul>
             <li>Default: Pushes all childs to the left</li>
           </ul>
         </li>
       </ul>
       
-      <div class="sub-index">
-        <p class="sub-title">space-between</p>
-        <p class="second">GOTO sub-index</p>
-        <p>GOTO top</p>
+  
+
+      <!-------
+      1st justify 
+      ------->
+      <div class="sub-index" id="space-evenly">
+        <p class="sub-title">Space Evenly</p>
+        <p class="second"><a href="#sub-index">GOTO sub-index</a></p>
+        <p><a href="#top">GOTO top</a></p>
       </div><!-- end of resume -->
   <!-- live example 2 -->
   <div class="resize-it">
-    <nav class="container">
+    <nav class="container" style="justify-content:space-evenly;">
       <div>1</div>
       <div>2</div>
       <div>3</div>
@@ -195,6 +168,18 @@
     </nav>
   </div>  <!-- end live example -->
 
+  <div class="code" style="display: flex; margin: auto;">
+<!-- html code -->
+<div class="code-snip html-code" id="html-code-a">
+  <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+</code></pre>
+HTML</div>  <!-- end html code -->
+  
   <!-- css code -->
   <div class="code-snip css-code">
     <pre class="line-numbers">
@@ -203,14 +188,183 @@
       display: flex;
       justify-content: space-evenly;
     }
-  </code>
-    </pre>
-  </div>  <!-- end css code -->
+  </code></pre>
+  CSS</div>  <!-- end css code -->
+  </div>  <!-- end of code -->
+
+</div>
+      <div class="sub-index" id="space-between">
+        <p class="sub-title">Space Between</p>
+        <p class="second"><a href="#sub-index">GOTO sub-index</a></p>
+        <p><a href="#top">GOTO top</a></p>
+      </div><!-- end of resume -->
+
+  <!-------
+  2nd justify 
+  ------->
+  <div class="resize-it">
+    <div class="container" style="justify-content:space-between;">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+  </div>  <!-- end live example -->
+
+  <div class="code" style="display: flex; margin: auto;">
+    <!-- html code -->
+<div class="code-snip html-code" id="html-code-a">
+  <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+    </code></pre>
+    HTML</div>  <!-- end html code -->
+    
+    <!-- css code -->
+    <div class="code-snip css-code">
+      <pre class="line-numbers">
+    <code class="language-css">
+      .container{
+        display: flex;
+        justify-content: space-evenly;
+      }
+    </code></pre>
+    CSS</div>  <!-- end css code -->
+    </div>  <!-- end of code -->
   
   <!-------
-  Third thingy
+  3rd Justify option
   ------->
-  <h2 id="justify">AAA</h2>
+  <div class="sub-index" id="space-around">
+    <p class="sub-title">Space Around</p>
+    <p class="second"><a href="#sub-index">GOTO sub-index</a></p>
+    <p><a href="#top">GOTO top</a></p>
+  </div><!-- end of resume -->
+
+  <div class="resize-it">
+    <nav class="container" style="justify-content:space-around;">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </nav>
+  </div>  <!-- end live example -->
+
+  <div class="code" style="display: flex; margin: auto;">
+    <!-- html code -->
+<div class="code-snip html-code" id="html-code-a">
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+    </code></pre>
+    HTML</div>  <!-- end html code -->
+    
+    <!-- css code -->
+    <div class="code-snip css-code">
+      <pre class="line-numbers">
+    <code class="language-css">
+      .container{
+        display: flex;
+        justify-content: space-evenly;
+      }
+    </code></pre>
+    CSS</div>  <!-- end css code -->
+    </div>  <!-- end of code -->
+  
+  <!-------
+  4th justify 
+  ------->
+  <div class="sub-index" id="flex-end">
+    <p class="sub-title">Flex End</p>
+    <p class="second"><a href="#sub-index">GOTO sub-index</a></p>
+    <p><a href="#top">GOTO top</a></p>
+  </div><!-- end of resume -->
+
+  <div class="resize-it">
+    <nav class="container" style="justify-content:flex-end;">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </nav>
+  </div>  <!-- end live example -->
+  
+  <div class="code" style="display: flex; margin: auto;">
+<!-- html code -->
+<div class="code-snip html-code" id="html-code-a">
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+    </code></pre>
+    HTML</div>  <!-- end html code -->
+    
+    <!-- css code -->
+    <div class="code-snip css-code">
+      <pre class="line-numbers">
+    <code class="language-css">
+      .container{
+        display: flex;
+        justify-content: space-evenly;
+      }
+    </code></pre>
+    CSS</div>  <!-- end css code -->
+    </div>  <!-- end of code -->
+
+    <!-------
+    5th justify  
+    ------->
+  <div class="sub-index" id="flex-start">
+    <p class="sub-title">Flex Start (default)</p>
+    <p class="second"><a href="#sub-index">GOTO sub-index</a></p>
+    <p><a href="#top">GOTO top</a></p>
+  </div><!-- end of resume -->
+
+  <div class="resize-it">
+    <nav class="container" style="justify-content:flex-start;">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </nav>
+  </div>  <!-- end live example -->
+
+  <div class="code" style="display: flex; margin: auto;">
+<!-- html code -->
+<div class="code-snip html-code" id="html-code-a">
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+    </code></pre>
+HTML</div>  <!-- end html code -->
+    
+    <!-- css code -->
+    <div class="code-snip css-code">
+      <pre class="line-numbers">
+    <code class="language-css">
+      .container{
+        display: flex;
+        justify-content: space-evenly;
+      }
+    </code></pre>
+    CSS</div>  <!-- end css code -->
+    </div>  <!-- end of code -->
+  
+  <!-------
+  ALIGN CONTENT
+  ------->
+  <h2 id="align-content">Align Content</h2>
   <h3>Moves items tru the X axis (column)</h3>
   <div class="resume">
       <ul>
@@ -223,9 +377,23 @@
       </ul>
   </div>
 
-  <!-- live example 2 -->
-  <div class="resize-it">
-    <nav class="container" style="justify-content: space-around;">
+  <!-- this div is to make responsiveness here -->
+  <div class="resp-code">
+  
+<!-- html code -->
+<div class="code-snip html-code" id="html-code-a">
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+      </code></pre>
+  HTML</div>  <!-- end html code -->
+
+  <!-- live example 1 -->
+  <div class="resize-it" style="width: fit-content; margin: 0 auto; resize: horizontal;">
+    <nav class="container" style="flex-direction: column;">
       <div>1</div>
       <div>2</div>
       <div>3</div>
@@ -239,12 +407,11 @@
   <code class="language-css">
     .container{
       display: flex;
-      justify-content: space-evenly;
+      flex-direction: column;
     }
-  </code>
-    </pre>
-  </div>  <!-- end css code -->
-
+  </code></pre>
+  CSS</div>  <!-- end css code -->
+  </div>  <!-- end of div to responsiveness -->
 
 
   <!-- code highlighting script-->
