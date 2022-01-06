@@ -17,7 +17,6 @@
     /* Flexbox stuff */
     /* streach the container tru Y axis */
     html, body {
-      box-sizing: border-box;
       height: 100%;
       padding: 10px;
     }
@@ -31,15 +30,15 @@
 
     /* flex align: move tru X axis */
     /* everything above must be as well */
-    /* .container {
-      align-items: flex-end;
-    } */
+    .container {
+      align-items:flex-end;
+    }
 
     /* center a div! */
-    .container {
+    /* .container {
       align-items: center;
       justify-content: center;
-    }
+    } */
 
 
   </style>
@@ -49,7 +48,7 @@
 <body>
   <!-- TODO take some ss whit every option, and code below -->
   <!-- HTML markup -->
-  <nav class="container">
+  <nav class="container" style="background-color: palevioletred;">
     <div>1</div>
     <div>2</div>
     <div>3</div>

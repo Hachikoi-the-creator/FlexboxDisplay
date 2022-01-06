@@ -48,7 +48,7 @@
   <h1 id="top">
     <a href="#direction">flex direction</a>
     <a href="#justify">justify</a> &
-    <a href="#">align content</a>
+    <a href="#align-menu">align content</a>
   </h1>
 
   <!-------
@@ -72,9 +72,7 @@
   </div>  <!-- end of resume -->
 
   <!-- this div is to make responsiveness here -->
-  <div class="resp-code">
-  
- 
+<div class="resp-code"> 
 <!-- html code -->
 <div class="code-snip html-code" id="html-code-a">
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
@@ -153,6 +151,7 @@
       <!-------
       1st justify 
       ------->
+      <!-- resume -->
       <div class="sub-index" id="space-evenly">
         <p class="sub-title">Space Evenly</p>
         <p class="second"><a href="#sub-index">GOTO sub-index</a></p>
@@ -229,7 +228,7 @@ HTML</div>  <!-- end html code -->
     <code class="language-css">
       .container{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
       }
     </code></pre>
     CSS</div>  <!-- end css code -->
@@ -271,7 +270,7 @@ HTML</div>  <!-- end html code -->
     <code class="language-css">
       .container{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
       }
     </code></pre>
     CSS</div>  <!-- end css code -->
@@ -313,7 +312,7 @@ HTML</div>  <!-- end html code -->
     <code class="language-css">
       .container{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-end;
       }
     </code></pre>
     CSS</div>  <!-- end css code -->
@@ -322,12 +321,14 @@ HTML</div>  <!-- end html code -->
     <!-------
     5th justify  
     ------->
+    <!-- nav section -->
   <div class="sub-index" id="flex-start">
     <p class="sub-title">Flex Start (default)</p>
     <p class="second"><a href="#sub-index">GOTO sub-index</a></p>
     <p><a href="#top">GOTO top</a></p>
-  </div><!-- end of resume -->
+  </div><!-- end nav section -->
 
+  <!-- live example -->
   <div class="resize-it">
     <nav class="container" style="justify-content:flex-start;">
       <div>1</div>
@@ -355,7 +356,7 @@ HTML</div>  <!-- end html code -->
     <code class="language-css">
       .container{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-start;
       }
     </code></pre>
     CSS</div>  <!-- end css code -->
@@ -364,40 +365,65 @@ HTML</div>  <!-- end html code -->
   <!-------
   ALIGN CONTENT
   ------->
-  <h2 id="align-content">Align Content</h2>
+  <h2 id="align-menu">Align Content</h2>
   <h3>Moves items tru the X axis (column)</h3>
   <div class="resume">
       <ul>
-        <li>space-evenly:</li>
+        <li><a href="#flex-start">Flex Start:</a> (Default) 
+          <ul>
+            <li>Pushes the items to the top</li>
+          </ul>
+        </li>
+        
+        <li><a href="#flex-end">Flex End:</a>
+          <ul>
+            <li>does something</li>
+          </ul>
+        </li>
+        
+        <li><a href="#stretch">Stretch</a>
+          <ul>
+            <li>something</li>
+          </ul>
+        </li>
+      
+      
+      <li><a href="#center">Center</a>
         <ul>
-          <li>Divides the empty space in fractions</li>
-          <li>N° fr = Nitems + 1 </li>
-          <li>Distributes those fr evenly between & around the items</li>
+          <li>someting</li>
         </ul>
-      </ul>
+      </li>
+    </ul>
   </div>
-
-  <!-- this div is to make responsiveness here -->
-  <div class="resp-code">
   
+  <!-- this div is to make responsiveness here -->
+  
+  <!-------
+  1st Align
+  ------->
+  <!-- nav section -->
+  <div class="sub-index" id="flex-start">
+    <p class="sub-title">Flex Start</p>
+    <p class="second"><a href="#align-menu">GOTO sub-index</a></p>
+    <p><a href="#top">GOTO top</a></p>
+  </div><!-- end nav section -->
+
+  <div class="resp-code">
+
 <!-- html code -->
 <div class="code-snip html-code" id="html-code-a">
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
-      </code></pre>
-  HTML</div>  <!-- end html code -->
+</code></pre>
+HTML</div>  <!-- end html code -->
 
-  <!-- live example 1 -->
+  <!-- live example  -->
   <div class="resize-it" style="width: fit-content; margin: 0 auto; resize: horizontal;">
-    <nav class="container" style="flex-direction: column;">
+    <nav class="container" style="align-items: flex-start; ">
       <div>1</div>
       <div>2</div>
-      <div>3</div>
-      <div>4</div>
     </nav>
   </div>  <!-- end live example -->
 
@@ -407,7 +433,131 @@ HTML</div>  <!-- end html code -->
   <code class="language-css">
     .container{
       display: flex;
-      flex-direction: column;
+      align-items: flex-start;
+    }
+  </code></pre>
+  CSS</div>  <!-- end css code -->
+  </div>  <!-- end of div to responsiveness -->
+  
+  
+  <!-------  
+  2nd Align
+  ------->
+  <!-- nav section -->
+  <div class="sub-index" id="flex-end">
+    <p class="sub-title">Flex End</p>
+    <p class="second"><a href="#align-menu">GOTO sub-index</a></p>
+    <p><a href="#top">GOTO top</a></p>
+  </div><!-- end nav section -->
+
+  <div class="resp-code">
+
+<!-- html code -->
+<div class="code-snip html-code" id="html-code-a">
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+</code></pre>
+HTML</div>  <!-- end html code -->
+
+  <!-- live example  -->
+  <div class="resize-it" style="width: fit-content; margin: 0 auto; resize: horizontal;">
+    <nav class="container" style="align-items: flex-start; ">
+      <div>1</div>
+      <div>2</div>
+    </nav>
+  </div>  <!-- end live example -->
+
+  <!-- css code -->
+  <div class="code-snip css-code">
+    <pre class="line-numbers">
+  <code class="language-css">
+    .container{
+      display: flex;
+      align-items: flex-end;
+    }
+  </code></pre>
+  CSS</div>  <!-- end css code -->
+  </div>  <!-- end of div to responsiveness -->
+  
+  <!-------  
+  3rd Align
+  ------->
+  <!-- nav section -->
+  <div class="sub-index" id="stretch">
+    <p class="sub-title">Stretch</p>
+    <p class="second"><a href="#align-menu">GOTO sub-index</a></p>
+    <p><a href="#top">GOTO top</a></p>
+  </div><!-- end nav section -->
+
+  <div class="resp-code">
+
+<!-- html code -->
+<div class="code-snip html-code" id="html-code-a">
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+</code></pre>
+HTML</div>  <!-- end html code -->
+
+  <!-- live example  -->
+  <div class="resize-it" style="width: fit-content; margin: 0 auto; resize: horizontal;">
+    <nav class="container" style="align-items: flex-start; ">
+      <div>1</div>
+      <div>2</div>
+    </nav>
+  </div>  <!-- end live example -->
+
+  <!-- css code -->
+  <div class="code-snip css-code">
+    <pre class="line-numbers">
+  <code class="language-css">
+    .container{
+      display: flex;
+      align-items: stretch;
+    }
+  </code></pre>
+  CSS</div>  <!-- end css code -->
+  </div>  <!-- end of div to responsiveness -->
+  
+  <!-------  
+  4th Align
+  ------->
+  <!-- nav section -->
+  <div class="sub-index" id="center">
+    <p class="sub-title">Center</p>
+    <p class="second"><a href="#align-menu">GOTO sub-index</a></p>
+    <p><a href="#top">GOTO top</a></p>
+  </div><!-- end nav section -->
+
+  <div class="resp-code">
+
+<!-- html code -->
+<div class="code-snip html-code" id="html-code-a">
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+</code></pre>
+HTML</div>  <!-- end html code -->
+
+  <!-- live example  -->
+  <div class="resize-it" style="width: fit-content; margin: 0 auto; resize: horizontal;">
+    <nav class="container" style="align-items: flex-start; ">
+      <div>1</div>
+      <div>2</div>
+    </nav>
+  </div>  <!-- end live example -->
+
+  <!-- css code -->
+  <div class="code-snip css-code">
+    <pre class="line-numbers">
+  <code class="language-css">
+    .container{
+      display: flex;
+      align-items: center;
     }
   </code></pre>
   CSS</div>  <!-- end css code -->
