@@ -1,12 +1,14 @@
-/* TODO
--write the styles that are a constant tru all the files */
-/* FIN */
-html { margin: 0; }
+html {
+  margin: 0;
+  scroll-behavior: smooth;
+}
 body {
   background-color: #b0e6ff;
   margin: 30px auto;
   width: 85%;
 }
+
+
 /* .container { border: 3px solid rgb(19, 43, 255);  } */
 .container > div {
   padding: 10px 77px;
@@ -85,7 +87,7 @@ pre.line-numbers {
 /* LIVE EXAMPLE STUFF */
 .resize-it {
   border: 3px solid rgb(0, 14, 143);
-  padding: 20px; 
+  /* padding: 20px;  */
   width: 96%;
   resize: horizontal;
   overflow: auto;
@@ -93,23 +95,24 @@ pre.line-numbers {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
   /* background-color: azure; */
   }
-  .resize-it .container {
-    background-color: rgb(222, 173, 255);
-    border-radius: 7px;
-  }
+.resize-it .container {
+  /* background-color: rgb(222, 173, 255); */
+  border-radius: 7px;
+}
 
-  /* 3 col LIVE EXAMPLE */
+/* 3 col LIVE EXAMPLE */
+.resp-code {
+  display: flex;
+}
+@media only screen and (max-width: 1100px) {
   .resp-code {
-    display: flex;
+  /* display: flex; */
+  flex-direction: column;
   }
-  @media only screen and (max-width: 1100px) {
-    .resp-code {
-    /* display: flex; */
-    flex-direction: column;
-    }
-  }
+}
 
-  /* EXTRA STUFF */
-  .css-code {
-    margin: auto;
-  }
+/* EXTRA STUFF */
+.css-code {
+  margin: auto;
+}
+

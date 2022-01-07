@@ -1,0 +1,107 @@
+* { box-sizing: border-box; }
+html {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-size: 1.5rem;
+}
+/* center everything & basics*/
+body {
+  background-color: #b0e6ff;
+  margin: 30px auto;
+  width: 85%;
+  display: flex; 
+  flex-direction: column;
+}
+div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: rgb(219, 181, 255);
+}
+div > p {
+  font-size: 20px;
+  font-style: italic;
+  margin: 0 0 25px 50px;
+}
+
+a { text-decoration: none; }
+
+a:hover { text-decoration: underline; }
+
+main {
+  margin-left: 220px;
+}
+h1{
+  text-align: center;
+  font-style: italic;
+}
+h2 {
+  font-weight: 300;
+}
+/* styling of items inside containers */
+.container > div {
+  padding: 10px 77px;
+  text-align: center;
+  font-size: 2em;
+  color: black;
+  border-radius: 7px;
+}
+.container > div:nth-child(1),
+.container > div:nth-child(3) {
+  background-color: rgb(255, 86, 86);
+}
+.container > div:nth-child(2),
+.container > div:nth-child(4) {
+  background-color: rgb(111, 154, 255);
+}
+
+/* some division */
+.container{
+  display: flex;
+  width: 100%;
+  border: 1px black solid;
+  border-radius: 7px;
+}
+
+/* specific styling */
+/* one */
+.one > div:nth-child(4) {
+  margin-left: auto;
+}
+/* two */
+/* justify-content:flex-end, WONT works */
+.two > div:nth-child(3) {
+  margin-left: auto;
+}
+/* html stuff */
+.html {
+  font-style: italic;
+  width: fit-content;
+  background-color: azure;
+}
+/* css */
+.css {
+  font-style: italic;
+  width: fit-content;
+  background-color: rgb(245, 169, 169);
+}
+/* FINISHED ONE */
+
+/* Flex shorthand */
+.dante {
+  box-sizing: border-box;
+  resize: horizontal;
+  overflow: auto;
+  padding: 1px;
+}
+.three > div{
+  /* flex: 1; */
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+.four > div:nth-child(2) {
+  flex: 3 3 0;
+}
