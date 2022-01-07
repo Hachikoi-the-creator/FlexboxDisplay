@@ -1,3 +1,25 @@
+/* // Personalized scroll bar */
+/* this ain't working T.T */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(174, 227, 251);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(60, 143, 252);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(112, 46, 255);
+} 
+
 html {
   margin: 0;
   scroll-behavior: smooth;
@@ -116,26 +138,7 @@ pre.line-numbers {
   margin: auto;
 }
 
-/* // Personalized scroll bar */
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: rgb(174, 227, 251);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(60, 143, 252);
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(112, 46, 255);
-} 
 
 /* WHAT WAS IN HTML FILE*/
 /* Flexbox stuff */
