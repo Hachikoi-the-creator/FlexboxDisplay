@@ -1,0 +1,138 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-size: 1.2rem;
+  background-color: #aaacff;
+}
+body h1, body h2, body h3,
+html h1,
+html h2,
+html h3 {
+  margin-left: 30px;
+}
+body p, body ul, body .dante,
+html p,
+html ul,
+html .dante {
+  margin-left: 40px;
+}
+body .css,
+html .css {
+  width: fit-content;
+  background-color: #8a8cff;
+}
+
+main {
+  height: 100%;
+  overflow: auto;
+}
+
+.nav-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  background-color: #8a8cff;
+  width: 200px;
+  height: 100%;
+  float: left;
+  overflow: auto;
+}
+.nav-list li > a {
+  text-decoration: none;
+  color: #100069;
+  padding: 8px;
+  display: block;
+  transition: 0.3s;
+  border-top: 1px rgba(1, 20, 192, 0.5) solid;
+}
+.nav-list li > a:hover {
+  color: #8a8cff;
+  background-color: #140085;
+}
+
+.container > div {
+  padding: 10px 69px;
+  text-align: center;
+  font-size: 2em;
+  color: black;
+  border-radius: 7px;
+}
+.container > div:nth-child(1), .container > div:nth-child(3) {
+  background-color: #ff5656;
+}
+.container > div:nth-child(2), .container > div:nth-child(4) {
+  background-color: #6f9aff;
+}
+
+.dante {
+  border-right: 2px red solid;
+  box-sizing: border-box;
+  resize: horizontal;
+  overflow: auto;
+  padding: 1px;
+  border-radius: 7px;
+}
+
+/* basic flex propierties */
+.container {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  border: 1px black solid;
+  border-radius: 7px;
+}
+
+.content .one > div:nth-child(4) {
+  margin-left: auto;
+}
+.content .two > div:nth-child(3) {
+  margin-left: auto;
+}
+.content .three > div {
+  flex: 1 1 0;
+}
+.content .four > div:nth-child(2) {
+  flex: 3 3 0;
+}
+.content .six {
+  flex-wrap: wrap;
+}
+.content .six div {
+  width: 60px;
+}
+.content .seven > div:nth-child(1) {
+  order: 3;
+}
+.content .seven > div:nth-child(2) {
+  order: 1;
+}
+.content .seven > div:nth-child(3) {
+  order: 4;
+}
+.content .seven > div:nth-child(4) {
+  order: 2;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fbaeae;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff5151;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff2e2e;
+}
+
+/*# sourceMappingURL=main.css.map */

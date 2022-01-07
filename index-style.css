@@ -4,6 +4,7 @@ body, html {
   padding: 0;
   background-color: rgb(139, 195, 248);
   font-family: 'Raleway', sans-serif;
+  display: grid;
 }
 h1 {
   text-align: center;
@@ -15,15 +16,15 @@ h1 {
 
 /* grid stuff */
 .container {
-  margin: 60px;
+  margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
   gap: 40px 20px;
   font-size: 17px;
   font-weight: 700;
 }
 .container > div {
-  height: 300px;
+  height: fit-content;
   text-align: center;
 }
 /* make the img fit the div */
