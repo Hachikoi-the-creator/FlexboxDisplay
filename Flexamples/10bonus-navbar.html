@@ -54,6 +54,9 @@
       .search--input {
         text-align: center;
       }
+      html, body {
+      margin: 20px;
+      }
     }
 
     @media all and (max-width: 600px) {
@@ -63,26 +66,46 @@
       .search--input {
         text-align: center;
       }
+      html, body {
+      margin: 20px;
+      }
     }
+
+    /* resize stuff */
+    /* .resize {
+      border: 3px solid rgb(0, 14, 143);
+      width: 96%;
+      resize: horizontal;
+      overflow: auto;
+      font-family: 'Raleway', sans-serif;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
+      }
+    .resize .container > *{
+      
+      width: fit-content;
+    } */
+
 
   </style>
 
 </head>
 <body>
-  
-  <nav>
-    <ul class="container">
-      <li>Home</li>
 
-      <li>Profile</li>
+  <div class="resize">
+    <nav>
+      <ul class="container">
+        <li>Home</li>
 
-      <li class="search">
-        <input type="text" class="search--input" placeholder="Search">
-      </li>
-
-      <li>Logout</li>
-    </ul>
-  </nav>
+        <li>Profile</li>
+        
+        <li class="search">
+          <input type="text" class="search--input" placeholder="Search">
+        </li>
+        
+        <li>Logout</li>
+      </ul>
+    </nav>
+  </div>
 
   <script src="../prism-highlight/prism.js"></script>
 </body>
